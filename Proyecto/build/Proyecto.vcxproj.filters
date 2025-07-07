@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\Yeimi\UTEC\3er ciclo\Progra3\Proyecto\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Yeimi\UTEC\3er ciclo\Progra3\Proyecto\pong_ascii.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Yeimi\UTEC\3er ciclo\Progra3\Proyecto\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{82DAA2A1-D005-3BD0-B4D5-7C25BAEFD27B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

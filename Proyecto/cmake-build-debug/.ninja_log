@@ -1,0 +1,5 @@
+# ninja log v6
+29	1224	7735862932255033	build.ninja	715d5a03a3a9cd81
+13	2707	7735851332957653	CMakeFiles/Proyecto.dir/main.cpp.obj	bee583e74702e7cd
+21	2631	7735851333031037	CMakeFiles/Proyecto.dir/pong_ascii.cpp.obj	f4c33f3590a3a235
+2707	3178	7735851359896162	Proyecto.exe	4c51facbc44c9e55
