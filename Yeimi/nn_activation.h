@@ -12,7 +12,7 @@
 namespace utec::neural_network {
 
 template<typename T, size_t DIMS>
-using Tensor = utec::algebra::Tensor<T, DIMS>;
+using Tensor = algebra::Tensor<T, DIMS>;
 
 template<typename T>
 class ReLU final : public ILayer<T> {
@@ -24,7 +24,7 @@ public:
     Tensor<T,2> forward(const Tensor<T,2>& z) override {
         last_input = z;
         Tensor<T,2> result(z.shape());
-        
+
         for (size_t i = 0; i < z.shape()[0]; ++i) {
             for (size_t j = 0; j < z.shape()[1]; ++j) {
                 result(i, j) = (z(i, j) < 0) ? 0 : z(i, j);
@@ -43,9 +43,7 @@ public:
         return grad;
     }
 
-    void update_params(IOptimizer<T>& optimizer) override {
-        // No parameters to update
-    }
+    void update_params(IOptimizer<T>& optimizer) override {}
 };
 
 template<typename T>
@@ -75,9 +73,7 @@ public:
         return grad;
     }
 
-    void update_params(IOptimizer<T>& optimizer) override {
-        // No parameters to update
-    }
+    void update_params(IOptimizer<T>& optimizer) override {}
 };
 
 } // namespace utec::neural_network
