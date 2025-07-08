@@ -2,7 +2,7 @@
 #define PROG3_NN_FINAL_PROJECT_V2025_01_DENSE_H
 
 #include "interfaces.h"
-#include "tensor.h"
+#include "../algebra/tensor.h"
 #include <array>
 #include <numeric>
 

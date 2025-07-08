@@ -54,6 +54,7 @@ namespace utec::neural_network {
             return out;
         }
 
+
     private:
         std::vector<std::unique_ptr<ILayer<T>>> layers_;
     };

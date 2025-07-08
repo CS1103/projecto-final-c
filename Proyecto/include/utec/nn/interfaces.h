@@ -1,7 +1,7 @@
 #ifndef PROG3_NN_FINAL_PROJECT_V2025_01_LAYER_H
 #define PROG3_NN_FINAL_PROJECT_V2025_01_LAYER_H
 
-#include "tensor.h"
+#include "../algebra/tensor.h"
 
 namespace utec::neural_network {
 

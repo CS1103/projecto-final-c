@@ -34,6 +34,8 @@ public:
         }
         return grad_input;
     }
+
+
 };
 
 template<typename T>

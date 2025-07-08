@@ -1,90 +1,80 @@
 #include "pong_ascii.h"
-#include "nn/neural_network.h"
+#include "../include/utec/agent/EnvGym.h"
 #include <iostream>
 #include <thread>
 #include <chrono>
-#include <vector>
-#include <string>
-#include <algorithm>
+#include <windows.h>
+#include <locale>
 
-const int WIDTH = 40;
-const int HEIGHT = 20;
+namespace utec::pong {
 
-void draw_screen(float ball_x, float ball_y, float paddle_y) {
-    std::vector<std::string> screen(HEIGHT, std::string(WIDTH, ' '));
+template <>
+void run_ascii_simulation<float>(PongAgent<float>& agent, int max_steps, int delay_ms) {
+    // Configurar UTF-8 para la simulación
+    SetConsoleOutputCP(CP_UTF8);
+    SetConsoleCP(CP_UTF8);
+    
+    const int max_lives = 3;
+    int lives = max_lives;
+    int score = 0;
+    int games_played = 0;
 
-    // Dibujar bola
-    int bx = static_cast<int>(ball_x);
-    int by = static_cast<int>(ball_y);
-    if (bx >= 0 && bx < WIDTH && by >= 0 && by < HEIGHT)
-        screen[by][bx] = 'O';
+    EnvGym env(80, 24);
+    float reward;
+    bool done = false;
+    int steps = 0;
 
-    // Dibujar paleta (barra vertical)
-    for (int i = -1; i <= 1; ++i) {
-        int py = static_cast<int>(paddle_y) + i;
-        if (py >= 0 && py < HEIGHT)
-            screen[py][WIDTH - 2] = '|';
-    }
+    auto state = env.reset();
 
-    // Limpiar consola (ANSI escape)
-    std::cout << "\033[2J\033[H";
-    for (const auto& row : screen) {
-        std::cout << row << "\n";
-    }
-}
+    while (lives > 0) {
+        int action = agent.act(state);
+        state = env.step(action, reward, done);
 
-void run_ascii_simulation(utec::neural_network::NeuralNetwork<float>& model) {
-    float ball_x = WIDTH / 2.0f;
-    float ball_y = HEIGHT / 2.0f;
-    float dx = -1.0f, dy = 0.5f;
-    float paddle_y = HEIGHT / 2.0f;
+        if (reward > 0) score += 1;
 
-    while (true) {
-        // -------- Convertir entrada a Tensor --------
-        std::vector<float> input = { ball_x, ball_y, dx, dy, paddle_y };
-        utec::algebra::Tensor<float, 2> input_tensor(1, input.size());
-        for (int i = 0; i < input.size(); ++i)
-            input_tensor(0, i) = input[i];
+        system("cls"); // clear screen (use "clear" on Unix)
 
-        // -------- Ejecutar predicción --------
-        auto output_tensor = model.predict(input_tensor);
-
-        // -------- Obtener acción --------
-        std::vector<float> output_row(output_tensor.shape()[1]);
-        for (size_t j = 0; j < output_tensor.shape()[1]; ++j)
-            output_row[j] = output_tensor(0, j);
-
-        int action = std::distance(output_row.begin(), std::max_element(output_row.begin(), output_row.end()));
-
-        // -------- Mover paleta --------
-        if (action == 1 && paddle_y > 1) paddle_y -= 1;
-        if (action == 2 && paddle_y < HEIGHT - 2) paddle_y += 1;
-
-        // -------- Mover bola --------
-        ball_x += dx;
-        ball_y += dy;
-
-        // Rebote vertical
-        if (ball_y <= 0 || ball_y >= HEIGHT - 1) dy *= -1;
-
-        // Rebote en la paleta (lado derecho)
-        if (ball_x >= WIDTH - 3 &&
-            ball_y >= paddle_y - 1 &&
-            ball_y <= paddle_y + 1) {
-            dx *= -1;
+        for (int y = 0; y < 24; ++y) {
+            for (int x = 0; x < 80; ++x) {
+                if ((int)state.ball_x == x && (int)state.ball_y == y)
+                    std::cout << "O";  // Bola
+                else if (x == 0 &&
+                         (y == (int)state.paddle_y ||
+                          y == (int)state.paddle_y - 1 ||
+                          y == (int)state.paddle_y + 1))
+                    std::cout << "|";  // Paleta de 3 bloques
+                else if (x == 79)  // Borde derecho
+                    std::cout << "|";
+                else if (y == 0 || y == 23)  // Bordes superior e inferior
+                    std::cout << "-";
+                else
+                    std::cout << " ";
+            }
+            std::cout << "\n";
         }
 
-        // Si la bola sale del campo
-        if (ball_x < 0 || ball_x >= WIDTH) {
-            std::cout << "\nPUNTO. Reiniciando bola...\n";
-            ball_x = WIDTH / 2.0f;
-            ball_y = HEIGHT / 2.0f;
-            dx = (rand() % 2 == 0) ? -1.0f : 1.0f;
-            dy = ((rand() % 3) - 1) * 0.5f;
+        std::cout << "Step: " << steps++ << " | Score: " << score << " | Lives: " << lives << " | Game: " << games_played + 1 << " | Ball: (" << (int)state.ball_x << "," << (int)state.ball_y << ")" << " | Paddle: " << (int)state.paddle_y << "\n";
+        std::this_thread::sleep_for(std::chrono::milliseconds(delay_ms));
+
+        if (done) {
+            lives--;
+            games_played++;
+            state = env.reset();
+            done = false;
+            steps = 0;
+            std::cout << "Perdió una vida. Reiniciando...\n";
             std::this_thread::sleep_for(std::chrono::milliseconds(800));
         }
 
-        draw_screen(ball_x, ball_y, paddle_y);
-        std::this_thread::sleep_for(std::chrono::milliseconds(80));
+        if (steps >= max_steps) {
+            state = env.reset();
+            games_played++;
+            std::cout << "Límite de pasos alcanzado. Reiniciando episodio...\n";
+            steps = 0;
+        }
     }
+
+    std::cout << "\n¡Juego terminado! Puntaje final: " << score << " en " << games_played << " partidas.\n";
 }
+
+} // namespace utec::pong

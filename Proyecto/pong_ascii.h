@@ -1,13 +1,18 @@
-//
-// Created by YEIMI on 7/07/2025.
-//
-
 #ifndef PONG_ASCII_H
 #define PONG_ASCII_H
 #pragma once
-#include "nn/neural_network.h"
+#include "../include/utec/nn/neural_network.h"
+#include "../include/utec/agent/PongAgent.h"
 
-// Corre la simulación visual Pong controlada por IA
-void run_ascii_simulation(utec::neural_network::NeuralNetwork<float>& model);
+namespace utec::pong {
 
-#endif //PONG_ASCII_H
+    template <typename T>
+    void run_ascii_simulation(PongAgent<T>& agent, int max_steps = 300, int delay_ms = 1000);
+
+
+
+    void run_ascii_simulation(utec::neural_network::NeuralNetwork<float>& model);
+}
+// namespace utec::pong
+
+#endif
