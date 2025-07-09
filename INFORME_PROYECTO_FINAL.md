@@ -41,7 +41,7 @@ Implementación de una red neuronal multicapa en C++ para el juego Pong, desarro
 2. **Dependencias**:
 
    * CMake 3.18+
-   * C++17 estándar
+   * C++20 estándar
    * Ninguna librería externa especializada (implementación propia)
 
 3. **Instalación**:
