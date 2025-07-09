@@ -176,73 +176,26 @@ Actualmente, las redes neuronales han alcanzado un nivel avanzado de sofisticaci
 
 ### 3. Ejecución
 
-> **Demo del proyecto**: El sistema incluye visualización en tiempo real del juego Pong con aprendizaje de la IA.
+
 
 **Pasos para ejecutar:**
 
-1. **Compilar el proyecto**:
-   ```bash
-   mkdir build && cd build
-   cmake ..
-   make
-   ```
 
-2. **Ejecutar entrenamiento**:
-   ```bash
-   ./train_pong
-   ```
-   - Entrena la red neuronal con hasta 5 millones de muestras
-   - Utiliza estrategia epsilon-greedy para exploración/explotación
-   - Guarda el modelo entrenado automáticamente
-
-3. **Visualizar resultados**:
-   ```bash
-   ./pong_ascii
-   ```
-   - Muestra simulación ASCII en tiempo real
-   - Demuestra el aprendizaje del agente IA
-   - Interfaz interactiva con métricas de rendimiento
-
----
 
 ### 4. Análisis del rendimiento
 
-* **Métricas de rendimiento obtenidas**:
-  * **Arquitectura utilizada**: 5 → 16 → 3 neuronas (147 parámetros totales)
-  * **Capacidad de procesamiento**: Hasta 5 millones de muestras
-  * **Tiempo de entrenamiento**: Configurable según tamaño de lote
-  * **Estrategia de exploración**: ε-greedy con decaimiento 0.9995
-  * **Convergencia**: Lograda mediante balance exploración/explotación
 
-* **Ventajas del sistema**:
-  * ✓ Implementación completa desde cero sin dependencias externas
-  * ✓ Código modular y extensible
-  * ✓ Soporte para múltiples tipos de datos (templates)
-  * ✓ Visualización en tiempo real
-
-* **Desventajas identificadas**:
-  * ✗ Limitado a redes pequeñas-medianas (sin paralelización GPU)
-  * ✗ Implementación secuencial sin optimización SIMD
-  * ✗ Funciones de activación limitadas (ReLU, Sigmoid)
-
-* **Mejoras futuras propuestas**:
-  * Implementar paralelización con OpenMP
-  * Añadir soporte para GPU con CUDA
-  * Incluir más arquitecturas (CNN, RNN)
-  * Optimizar operaciones matriciales con BLAS
-
----
 
 ### 5. Trabajo en equipo
 
 | Tarea | Miembro | Rol |
 |-------|---------|-----|
-| Investigación teórica | **Varela Villarreal, Yeimi Adelmar** | Documentar bases teóricas e historia de NNs |
-| Desarrollo de arquitectura | **Guerrero Gutierrez, Nayeli Belén** | Diseño UML y esquemas de clases |
-| Implementación del modelo | **Medina Patrick** | Código C++ del framework neuronal |
-| Pruebas y benchmarking | **Araoz, Fali** | Generación de métricas y testing |
-| Documentación y demo | **Ignacio** | Tutorial y demostración del sistema |
-| Análisis de rendimiento | **Guillaume** | Evaluación y optimización de performance |
+| Investigación teórica | | Documentar bases teóricas e historia de NNs |
+| Desarrollo de arquitectura | | Diseño UML y esquemas de clases |
+| Implementación del modelo |  | Código C++ del framework neuronal |
+| Pruebas y benchmarking |  | Generación de métricas y testing |
+| Documentación y demo |  | Tutorial y demostración del sistema |
+| Análisis de rendimiento |  | Evaluación y optimización de performance |
 
 > *Distribución de responsabilidades del equipo de desarrollo.*
 
@@ -250,31 +203,7 @@ Actualmente, las redes neuronales han alcanzado un nivel avanzado de sofisticaci
 
 ### 6. Conclusiones
 
-* **Logros principales**:
-  * Implementación exitosa de framework neuronal completo desde cero
-  * Desarrollo de sistema de álgebra lineal propio con tensores genéricos
-  * Creación de agente IA funcional para el juego Pong
-  * Aplicación práctica de algoritmos de aprendizaje automático
 
-* **Evaluación del proyecto**:
-  * Calidad del código: Alta, con arquitectura modular y extensible
-  * Rendimiento: Adecuado para propósito académico y demostrativo
-  * Funcionalidad: Completa, cumple todos los objetivos planteados
-  * Documentación: Exhaustiva con ejemplos y casos de uso
-
-* **Aprendizajes obtenidos**:
-  * Comprensión profunda de algoritmos de retropropagación
-  * Dominio de programación genérica en C++
-  * Experiencia en optimización numérica y álgebra lineal
-  * Aplicación de principios de ingeniería de software
-
-* **Recomendaciones para trabajo futuro**:
-  * Escalar a datasets más grandes y complejos
-  * Implementar optimizaciones de rendimiento (GPU, paralelización)
-  * Añadir más tipos de capas y arquitecturas
-  * Desarrollar interfaz gráfica más avanzada
-
----
 
 ### 7. Bibliografía
 
