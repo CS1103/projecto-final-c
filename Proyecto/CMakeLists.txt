@@ -5,7 +5,6 @@ set(CMAKE_CXX_STANDARD 20)
 
 # Archivos fuente principales
 add_executable(Proyecto
-        main.cpp
         pong_ascii.cpp
         include/utec/agent/state.h
         include/utec/agent/EnvGym.h
