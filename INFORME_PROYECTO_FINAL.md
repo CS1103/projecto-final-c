@@ -242,5 +242,3 @@ Actualmente, las redes neuronales han alcanzado un nivel avanzado de sofisticaci
 Este proyecto usa la licencia **MIT**. Ver [LICENSE](LICENSE) para más detalles.
 
 ---
-
-*Este informe representa el trabajo realizado por el equipo en el desarrollo del proyecto final de Programación III, demostrando la aplicación práctica de conceptos avanzados de programación y inteligencia artificial.*
