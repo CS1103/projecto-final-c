@@ -26,12 +26,12 @@ Implementación de una red neuronal multicapa en C++ para el juego Pong, desarro
 * **Grupo**: `C--`
 * **Integrantes**:
 
-  * **Varela Villarreal, Yeimi Adelmar** – (Responsable de investigación teórica)
-  * **Guerrero Gutierrez, Nayeli Belén** – 202410790 (Desarrollo de la arquitectura)
-  * **Medina Patrick** – (completar código) (Implementación del modelo)
-  * **Araoz, Fali** – (completar código) (Pruebas y benchmarking)
-  * **Ignacio** – (completar código) (Documentación y demo)
-  * **Guillaume** – (completar código) (Análisis de rendimiento)
+  * **Varela Villarreal, Yeimi Adelmar** – 
+  * **Guerrero Gutierrez, Nayeli Belén** – 202410790 
+  * **Medina Patrick** – (completar código)
+  * **Araoz, Fali** – (completar código) 
+  * **Ignacio** – (completar código) 
+  * **Guillaume** – (completar código)
 
 ---
 
