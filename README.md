@@ -4,7 +4,8 @@
 ### **Descripción**
 
 Implementación de una red neuronal multicapa en C++ para el juego Pong, desarrollando desde cero un framework completo de redes neuronales artificiales sin dependencias externas especializadas.
-Link de video: https://drive.google.com/drive/folders/19qsTzn_ZZVr3zBoK0ezku-rojtIc5Emf?usp=sharing 
+
+###Link de video (github no permite files > 25MB): https://drive.google.com/drive/folders/19qsTzn_ZZVr3zBoK0ezku-rojtIc5Emf?usp=sharing 
 ### Contenidos
 
 1. [Datos generales](#datos-generales)
