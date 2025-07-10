@@ -30,7 +30,7 @@ Implementación de una red neuronal multicapa en C++ para el juego Pong, desarro
   * **Guerrero Gutierrez, Nayeli Belén** – 202410790 
   * **Medina Reyes Patrick Ricardo** – 202410074
   * **Araoz Arana, Fali Ferdinand** – 202410721 
-  * **Vidal Garcia Ignacio Paolo ** – 200059120
+  * **Vidal Garcia Ignacio Paolo** – 200059120
   * **Bousssus Huerta Guillaume** – 202410017
 
 ---
