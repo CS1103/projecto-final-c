@@ -28,9 +28,9 @@ Implementación de una red neuronal multicapa en C++ para el juego Pong, desarro
 
   * **Varela Villarreal, Yeimi Adelmar** – 202410586
   * **Guerrero Gutierrez, Nayeli Belén** – 202410790 
-  * **Medina Patrick** – (completar código)
+  * **Medina Reyes Patrick Ricardo** – 202410074
   * **Araoz Arana, Fali Ferdinand** – 202410721 
-  * **Vidal Garcia Ignacio** – (completar código) 
+  * **Vidal Garcia Ignacio Paolo ** – 200059120
   * **Bousssus Huerta Guillaume** – 202410017
 
 ---
