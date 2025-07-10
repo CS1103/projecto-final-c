@@ -1,17 +1,14 @@
 # ninja log v6
-29	1224	7737312184549406	build.ninja	715d5a03a3a9cd81
+29	1224	7737333752074390	build.ninja	715d5a03a3a9cd81
 3300	4091	7736177420741883	test_relu.exe	9a26dab0412a1ea5
-36	3522	7736093479139210	CMakeFiles/Proyecto.dir/main.cpp.obj	1fb0d76fbbc7ff38
-45	4461	7736093479224386	CMakeFiles/Proyecto.dir/pong_ascii.cpp.obj	b84283b983fbfd6d
+46	11379	7737312254208443	CMakeFiles/Proyecto.dir/pong_ascii.cpp.obj	45f98da0084f8618
 5947	6721	7736157941228352	test_convergence.exe	49129352944a9d5c
-2707	3178	7735851359896162	Proyecto.exe	4c51facbc44c9e55
+5098	5584	7737315709534682	Proyecto.exe	339e11bfe2dd6237
+119	7432	7736580462656893	CMakeFiles/train_pong.dir/train_pong.cpp.obj	84cbebaef6c1dabc
 29	5946	7736157882054186	CMakeFiles/test_convergence.dir/tests/test_convergence.cpp.obj	a8d27502264cf77
 24	3299	7736177387977098	CMakeFiles/test_relu.dir/tests/test_ReLu.cpp.obj	f096e0e8857dc64e
-119	7432	7736580462656893	CMakeFiles/train_pong.dir/train_pong.cpp.obj	84cbebaef6c1dabc
 133	8095	7736580462800632	CMakeFiles/train_pong.dir/pong_ascii.cpp.obj	e19a60a72fac94b3
 8095	9198	7736580542415758	train_pong.exe	1432dd97da273839
-32	3995	7737312254075213	CMakeFiles/Proyecto.dir/main.cpp.obj	630b5dd9d11d2d64
-58	10734	7737312254338131	CMakeFiles/Proyecto.dir/train_pong.cpp.obj	be714833f5698f15
-46	11379	7737312254208443	CMakeFiles/Proyecto.dir/pong_ascii.cpp.obj	45f98da0084f8618
 29	5097	7737315658832289	CMakeFiles/Proyecto.dir/train_pong.cpp.obj	be714833f5698f15
-5098	5584	7737315709534682	Proyecto.exe	339e11bfe2dd6237
+43	6775	7737334145051823	CMakeFiles/Proyecto.dir/train_pong.cpp.obj	be714833f5698f15
+31	7584	7737334144928411	CMakeFiles/Proyecto.dir/pong_ascii.cpp.obj	45f98da0084f8618

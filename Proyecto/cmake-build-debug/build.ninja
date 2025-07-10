@@ -49,15 +49,6 @@ cmake_ninja_workdir = C$:/Users/ferdi/CODE/Progra3/#Proyecto/projecto-final-c/Pr
 
 build cmake_object_order_depends_target_Proyecto: phony || .
 
-build CMakeFiles/Proyecto.dir/main.cpp.obj: CXX_COMPILER__Proyecto_unscanned_Debug C$:/Users/ferdi/CODE/Progra3/#Proyecto/projecto-final-c/Proyecto/main.cpp || cmake_object_order_depends_target_Proyecto
-  DEP_FILE = CMakeFiles\Proyecto.dir\main.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  INCLUDES = -I"C:/Users/ferdi/CODE/Progra3/#Proyecto/projecto-final-c/Proyecto" -I"C:/Users/ferdi/CODE/Progra3/#Proyecto/projecto-final-c/Proyecto/include"
-  OBJECT_DIR = CMakeFiles\Proyecto.dir
-  OBJECT_FILE_DIR = CMakeFiles\Proyecto.dir
-  TARGET_COMPILE_PDB = CMakeFiles\Proyecto.dir\
-  TARGET_PDB = Proyecto.pdb
-
 build CMakeFiles/Proyecto.dir/pong_ascii.cpp.obj: CXX_COMPILER__Proyecto_unscanned_Debug C$:/Users/ferdi/CODE/Progra3/#Proyecto/projecto-final-c/Proyecto/pong_ascii.cpp || cmake_object_order_depends_target_Proyecto
   DEP_FILE = CMakeFiles\Proyecto.dir\pong_ascii.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
@@ -84,7 +75,7 @@ build CMakeFiles/Proyecto.dir/train_pong.cpp.obj: CXX_COMPILER__Proyecto_unscann
 #############################################
 # Link the executable Proyecto.exe
 
-build Proyecto.exe: CXX_EXECUTABLE_LINKER__Proyecto_Debug CMakeFiles/Proyecto.dir/main.cpp.obj CMakeFiles/Proyecto.dir/pong_ascii.cpp.obj CMakeFiles/Proyecto.dir/train_pong.cpp.obj
+build Proyecto.exe: CXX_EXECUTABLE_LINKER__Proyecto_Debug CMakeFiles/Proyecto.dir/pong_ascii.cpp.obj CMakeFiles/Proyecto.dir/train_pong.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Proyecto.dir

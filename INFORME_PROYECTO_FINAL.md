@@ -29,7 +29,7 @@ Implementación de una red neuronal multicapa en C++ para el juego Pong, desarro
   * **Varela Villarreal, Yeimi Adelmar** – 
   * **Guerrero Gutierrez, Nayeli Belén** – 202410790 
   * **Medina Patrick** – (completar código)
-  * **Araoz, Fali** – (completar código) 
+  * **Araoz Arana, Fali Ferdinand** – 202410721 
   * **Ignacio** – (completar código) 
   * **Guillaume** – (completar código)
 
@@ -109,9 +109,23 @@ Actualmente, las redes neuronales han alcanzado un nivel avanzado de sofisticaci
 
 #### 1.2 Principales arquitecturas: MLP, CNN, RNN
 
-*[Contenido a completar por los compañeros de equipo]*
+Después de revisar la historia de las redes neuronales, es relevante mencionar las 3 arquitecturas de estas:
+
+* MLP (Multilayer Perceptron): Una MLP es una red neuronal compuesta por capas de neuronas completamente conectadas. Rumelhart, Hinton y Williams, (1986) “Las redes multicapa permite representar funciones no lineales mediante la combinación de múltiples capas con funciones de activación no lineales”. Esto quiere decir que una MLP puede aproximar cualquier función continua con la cantidad ideal de neuronas y capas.
+  Esta estructura cuenta con capas de entrada, capas ocultas y una capa de salida.
+
+* CNN (Convolutional Neural Network): Las CNN están diseñadas para procesar datos como imágenes. A diferencia de las MLP, usan capas que comparten pesos y se enfocan en regiones locales del espacio de entrada. LeCun et al., (1998) dicen que “Las convoluciones permiten a la red detectar características espaciales locales de manera eficiente y con menos parámetros”. Esta estructura cuenta con capas de convolución, capas de activación, capas de pooling y capas totalmente conectadas.
+
+* RNN (Recurrent Neural Network): Las RNN son redes neuronales utilizadas para modelar datos donde el orden importa, como en texto, audio o series temporales. Incorporan una memoria interna que permite tener en cuenta entradas pasadas. Esta arquitectura cuenta con capas recurrentes, capas GRU (Gated Recurrent Unit), y capas LSTM (Long Short Term Memory) “Las LSTM pueden recordar información durante largos períodos gracias a su estructura de memoria controlada por compuertas” (Hochreiter & Schmidhuber, 1997).
+
+
 
 #### 1.3 Algoritmos de entrenamiento: backpropagation, optimizadores
+Por último, es importante revisar los algoritmos de entrenamiento utilizados para alimentar las redes neuronales.
+
+* Backpropagation: El algoritmo de backpropagation, formalizado por Rumelhart, Hinton y Williams en 1986 consiste en utilizar la regla de la cadena para calcular los gradientes de la función de pérdida con respecto a cada peso en la red, desde la capa de salida hacia la capa de entrada. Esta retropropagación permite ajustar los pesos para minimizar el error del modelo. Este es esencial para minimizar el error durante el aprendizaje supervisado.
+* Optimizadores: En este caso, hablaremos sobre un optimizador específico: Adam. El optimizador Adam (Adaptive Moment Estimation), propuesto por Kingma y Ba en 2014, combina las ventajas de algoritmos anteriores: utiliza la media y varianza de gradientes, ajustando la tasa de aprendizaje para cada parámetro. Además, corrige el sesgo inicial en las estimaciones y requiere poco ajuste manual. Esto lo hace particularmente efectivo en redes profundas entrenadas con datos grandes y ruidosos
+
 
 *[Contenido a completar por los compañeros de equipo]*
 
@@ -183,6 +197,27 @@ Actualmente, las redes neuronales han alcanzado un nivel avanzado de sofisticaci
 
 
 ### 4. Análisis del rendimiento
+
+* **Métricas de ejemplo**:
+
+    * Iteraciones: 10 000 épocas(50 por lote).
+    * Tiempo total de entrenamiento: 1h20m.
+    * Precisión final: --.-%.
+
+* **Configuración de exploración:**:
+    * Epsilon inicial: 1
+    * Decay de Epsilon: 0.9995
+    * Epsilon mínimo: 0.1
+
+* **Ventajas/Desventajas**:
+
+    * * Código ligero y dependencias mínimas.
+    * – Sin paralelización, rendimiento limitado.
+* **Mejoras futuras**:
+
+    * Uso de BLAS para multiplicaciones (Justificación).
+    * Paralelizar entrenamiento por lotes (Justificación).
+
 
 
 

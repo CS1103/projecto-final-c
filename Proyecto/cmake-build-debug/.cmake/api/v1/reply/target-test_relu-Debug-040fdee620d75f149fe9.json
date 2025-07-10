@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "test_dense_layer.exe"
+			"path" : "test_relu.exe"
 		},
 		{
-			"path" : "test_dense_layer.pdb"
+			"path" : "test_relu.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -28,13 +28,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 23,
+				"line" : 25,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 24,
+				"line" : 26,
 				"parent" : 0
 			}
 		]
@@ -74,7 +74,7 @@
 			]
 		}
 	],
-	"id" : "test_dense_layer::@6890427a1f51a3e7e1df",
+	"id" : "test_relu::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -94,8 +94,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "test_dense_layer",
-	"nameOnDisk" : "test_dense_layer.exe",
+	"name" : "test_relu",
+	"nameOnDisk" : "test_relu.exe",
 	"paths" : 
 	{
 		"build" : ".",
@@ -116,7 +116,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "tests/test_dense_layer.cpp",
+			"path" : "tests/test_ReLu.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

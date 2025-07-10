@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "test_convergence.exe"
+			"path" : "train_pong.exe"
 		},
 		{
-			"path" : "test_convergence.pdb"
+			"path" : "train_pong.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -28,13 +28,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 29,
+				"line" : 31,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 30,
+				"line" : 32,
 				"parent" : 0
 			}
 		]
@@ -70,11 +70,12 @@
 			},
 			"sourceIndexes" : 
 			[
-				0
+				0,
+				1
 			]
 		}
 	],
-	"id" : "test_convergence::@6890427a1f51a3e7e1df",
+	"id" : "train_pong::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -94,8 +95,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "test_convergence",
-	"nameOnDisk" : "test_convergence.exe",
+	"name" : "train_pong",
+	"nameOnDisk" : "train_pong.exe",
 	"paths" : 
 	{
 		"build" : ".",
@@ -107,7 +108,8 @@
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				0
+				0,
+				1
 			]
 		}
 	],
@@ -116,7 +118,13 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "tests/test_convergence.cpp",
+			"path" : "train_pong.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "pong_ascii.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],
