@@ -199,7 +199,7 @@ Por último, es importante revisar los algoritmos de entrenamiento utilizados pa
 
     * Iteraciones: 10 000 épocas(50 por lote).
     * Tiempo total de entrenamiento: 1h20m.
-    * Precisión final: 75.8%.
+    * Precisión final: 13.95%.
 
 * **Configuración de exploración:**:
     * Epsilon inicial: 1
